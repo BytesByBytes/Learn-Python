@@ -5,14 +5,6 @@ name = "Joe"
 question = "Will I be rich this year? "
 answer = ""
 
-
-#User Inoput 
- 
-
-
-
-
-
 random_number = random.randint(1,9) #storing the random number 
 
 
