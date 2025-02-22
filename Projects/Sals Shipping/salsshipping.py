@@ -23,3 +23,6 @@ else:
 print("Ground Shipping $" + str(cost_ground))
 print("Ground Shpping Premium $" + str(premium ))
 print("Drone Shipping $" + str(cost_drone))
+
+
+#test
