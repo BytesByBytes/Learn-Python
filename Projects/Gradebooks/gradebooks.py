@@ -1,21 +1,24 @@
 last_semester_gradebook = [["politics", 80], ["latin", 96], ["dance", 97], ["architecture", 65]]
 
-# Your code below: 
+#Create lists for subjects and grades
 
-subjects = ["physics", "calculus", "poetry", "history"]
-grades = [98, 97, 85, 88]
+subject = ["physics", "calculus", "poetry", "history"]
+grade = [98, 97, 85, 88]
 
 
-gradebook = [["physics", 98],["Calculus", 97],["poetry", 85],["history", 88]]
+gradebook = [["physics", 98],["calculus", 97],["poetry", 85],["history", 88]]
 
-gradebook.append(["computer_science", 100])
+# Remove the grade and append "Pass" for the poetry subject
+gradebook.remove(["poetry", 85])
+gradebook.append(["poetry", "Pass"])
 
-#Visual Arts Chages 
-gradebook.append(["visual_arts", 93])
-gradebook[-1][-1] = 93 + 5
+# Appending data in a way to improve performance
+for subject, grade in [("computer_science", 100), ("visual_arts", 93)]:
+    gradebook.append([subject, grade])
+    
+if len(gradebook) > 0 and len(gradebook[-1]) > 1:
+    gradebook[-1][-1] = 98
 
-gradebook[2].remove(85)
-gradebook[2].append("Pass")
 
 full_gradebook = (last_semester_gradebook + gradebook)
 print(full_gradebook)
